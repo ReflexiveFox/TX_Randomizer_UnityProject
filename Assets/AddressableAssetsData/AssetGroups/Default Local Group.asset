@@ -1,0 +1,401 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: ae46a94b4068fc149a89e8475dba9344
+  m_SerializeEntries:
+  - m_GUID: 00f2d091602a63e48b9ace527c900a08
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Triangle_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 20f43f01d8d4ec048bd690113c37f0c5
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Blue_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 40190a627b4dfe541b495332ec8fbd5d
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Frontier_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 604c28f4200542f4f884fcddd5a2009f
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Inferno_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8085d28c1dc7d9448998b65fda3f3fea
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Prodigy_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a1ed4fa05106a8140a00536a69b30161
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Stone_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b1ba6c37c97d44445b991b171cbd47b5
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Digital_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f1313fffaa440de43b2dfda70ecf24c5
+    m_Address: Assets/ImportedAssets/PaintsPreviews/TX_1_Year_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 026c60be31e003340bd6769011999b0b
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Halloween_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 22364b2c4ccae9f4fa75efdb494fcefd
+    m_Address: Assets/ImportedAssets/PaintsPreviews/StarrySky_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 32b1c37956140cd42a35fc25317b255e
+    m_Address: Assets/ImportedAssets/PaintsPreviews/White_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a21e4d8584ef5234dac820d76ac15cd2
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Tundra_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c2390b9354190f646874bcf76812d261
+    m_Address: Assets/ImportedAssets/PaintsPreviews/SpringColors_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d2848720e53a6f34b92fd732c243534b
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Mary_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e21b23ac7db736d48bacfbe1061b11bf
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Termite_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 23222624f4e60b647947ba503d8d993d
+    m_Address: Assets/ImportedAssets/PaintsPreviews/fractal_preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4365c2021737b884189abceacad9f6ce
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Marine_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 63ee9cd16137ddb489045b36ea33ea2b
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Rivet_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 935ce45c1817c6f418c83794e502a841
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Freedom_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 938c6f91f45bdfb48b951be6ef12040e
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Clay_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a3c647e58cbd0a14daff1a443a916bf6
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Mosaic_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c380be30a020fc146ac4613931ccb666
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Needle_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f39ff6afe64e6ff4c890d8c1733b4fac
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Guerrilla_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 0451e8d853f141d44a01e9bf42c7c538
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Summer_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1469c8c5753ae99448229b59b44a4cef
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Noise_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 34ffac37198b3bb4e9f866a2167c4912
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Flora_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 94ad6873ac0f45846a064c7053181cfc
+    m_Address: Assets/ImportedAssets/PaintsPreviews/RedAmber_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d451531efcc5a7a4d81d91566d7e5642
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Emerald_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f4142f06aa2af55468b0af3fb35ab0a6
+    m_Address: Assets/ImportedAssets/PaintsPreviews/AnaVatan_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 050056bc117379d4b98ba755874afa2e
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Sandstone_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 05e5aba59e128184b8b9b82682e66cea
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Steamulator(F)_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3543b2c40a430c544bf7125800c8127b
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Steamulator(SF)_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6549a37051764744b9759cae62f241b9
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Pink_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b5279598e472c504cb592d812aed19ea
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Tar_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 06baf416bc5b25948b6e8492f57505d3
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Ice_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1634beecfe2b3b04781cbc98ba4c0b06
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Vostok-1_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 26c1ae1e93a9ce24caf9f22bd0b3c394
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Hydra_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 46d3835912bfd87449919bc9186039cc
+    m_Address: Assets/ImportedAssets/PaintsPreviews/WorldCup2018_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 468ce547077a6534682b7c6a2ca7c822
+    m_Address: Assets/ImportedAssets/PaintsPreviews/EasternStar_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 966e580aeafc2cc468c5276f71ef8706
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Bananas_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b686c6684de3ba64e96e1f4ad4c90a3a
+    m_Address: Assets/ImportedAssets/PaintsPreviews/BlackRoger_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: c63ede54fa22fcd448b95730a16819ad
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Taiga_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d62122a526b48544cbde184b357ce433
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Radiation_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d63c7cce7e85c784fa12a96af90f9e6d
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Desert_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 877697b9c4a621f42ad82ce947f77016
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Cedar_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a784a3975b5297a44b771919116ad67c
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Swamp_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: d78672681969bdd4e8cf8269914e946f
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Green_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1872ec80c23eb0644968d51e7da16258
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Universe_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 783be441321bbf743b041fb637a64ad2
+    m_Address: Assets/ImportedAssets/PaintsPreviews/TheBeginning_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: a83cb0b980a8d404ba8658cc45070ffc
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Honeycomb_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b848a2f5c7aeec4449a96c3dd756559a
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Rust_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 29b05ac414b35044c863d8ad4b790ad9
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Flame_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 29f48437ba97b604c81b6f9e79d60bd0
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Storm_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 296f1d7527611294aa571a16a9b72a3e
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Winter_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 4944dae3960c5404ab5d6ba4b7758ebe
+    m_Address: Assets/ImportedAssets/PaintsPreviews/MarsStars_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 492a9677d22dd924585a0f6dd95c75d8
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Smoke_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 69b87c13845fc434b97c35c19c609600
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Coal_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: e9c4de7e1edd1cd4297457b5358509db
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Antarctica_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f9a4a6fb9ae20b149aa2eef36fe7b276
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Forester_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: f909edf989f353f4db286bbb476ae25c
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Gold_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6adada11aa0e46e45b3c603789b6a062
+    m_Address: Assets/ImportedAssets/PaintsPreviews/LightBlue_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1b9b4897fcb3bdc48a5f226c2f2597d3
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Yellow_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 1babf2bb17b89c243b2318f770c020ed
+    m_Address: Assets/ImportedAssets/PaintsPreviews/BetaTester_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6b26c7ac0bcfc0442b6c43a2ec24e5e4
+    m_Address: Assets/ImportedAssets/PaintsPreviews/TankiInMoscow_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8b45b97fbde22b84c80739f8f4028557
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Orange_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 8bb51129e090c4b4b94c311da5e7b6ec
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Jade_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: abf27cb0a1691f049a65a1911d4729f4
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Loam_preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: db02bf5bbcd364640afd106924563e58
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Roger_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fb9b1c4a792202441b9d5b566a7d1c3c
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Orion_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: fbee43096f315cc4aac8cb7117ee353d
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Canyon_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2cf5f708fe3b0044ebeeb4224eba11b0
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Halloween2017_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3c96ec7ffd2904443808d13236b181f0
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Swash_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 5cf3de0d24400d341a9ac3f6b9bd9883
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Rocks_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6c653be08ee2ff948b2d45d69b689da2
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Andromeda_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6cfd96038ff330049add4b35da6c22d5
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Steel_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 7c9702d7219473547a04459cbbd5f16c
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Galaxy_preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ac79923aed55dc34589cec19b28f8ebe
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Red_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: acac940f74080494eb765e802561cd69
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Dirty_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cc7269e5bc20c504baf86d8c8d6aa0b9
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Spark_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2d608d9e835a9a641a67be23c9226ec7
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Savannah_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3d20fab1e451eae40988ee34b9eba1b8
+    m_Address: Assets/ImportedAssets/PaintsPreviews/RedBanner_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3dfcab5bc2c513f4a998ef87fd67449f
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Patina_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 9dff3ca1aec580c4f8a0020b3bc3d468
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Corrosion_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: ad9efff72490cd4409a141376ff1167b
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Sport_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bd726bb083daf904a82f25bef43b381c
+    m_Address: Assets/ImportedAssets/PaintsPreviews/North_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bdf9bd6a93224d94c957dfdefa450d2f
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Antares_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cd86a37fdcb25e2449b48ee86afe5f2c
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Champion_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cd58108b93a31df4a9e23067dd4e1dcb
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Carbon_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2e9c5f96b072afb479235fbc53fd6277
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Antaeus_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 3e8d79c1d21f2f648b8f39c3c29b7f48
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Glacier_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: cef483e271744104da666ed4c5bee046
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Urban_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 2f3d4f4afc0fde84d91e246241d9d159
+    m_Address: Assets/ImportedAssets/PaintsPreviews/ArrowsOfLove_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: 6f5d5c57825238445b64dca337477d6c
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Military_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: bfedb7d2959f1cc4983931ce43ea5a11
+    m_Address: Assets/ImportedAssets/PaintsPreviews/Dragon_Preview.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 37017e25fa9d70041ab94f1064345059, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: da414d6d9f0af374aa65d9109aae7741, type: 2}
+    - {fileID: 11400000, guid: bda2366bd6242bf4b9c3c5945dcc9580, type: 2}
