@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70054374b2dee994c892107025fd4526, type: 3}
+  m_Name: CoatingName_Dictionary
+  m_EditorClassIdentifier: 
+  Dictionary:
+  - KeyElement: 0
+    ValueElement: None
+  - KeyElement: 1
+    ValueElement: Andromeda
+  - KeyElement: 2
+    ValueElement: Antaeus
+  - KeyElement: 3
+    ValueElement: Antares
+  - KeyElement: 4
+    ValueElement: Blue
+  - KeyElement: 5
+    ValueElement: Cedar
+  - KeyElement: 6
+    ValueElement: Clay
+  - KeyElement: 7
+    ValueElement: Coal
+  - KeyElement: 8
+    ValueElement: Corrosion
+  - KeyElement: 9
+    ValueElement: Digital
+  - KeyElement: 10
+    ValueElement: Dirty
+  - KeyElement: 11
+    ValueElement: Emerald
+  - KeyElement: 12
+    ValueElement: Flame
+  - KeyElement: 13
+    ValueElement: Flora
+  - KeyElement: 14
+    ValueElement: Forester
+  - KeyElement: 15
+    ValueElement: Frontier
+  - KeyElement: 16
+    ValueElement: Galaxy
+  - KeyElement: 17
+    ValueElement: Glacier
+  - KeyElement: 18
+    ValueElement: Gold
+  - KeyElement: 19
+    ValueElement: Green
+  - KeyElement: 20
+    ValueElement: Guerrilla
+  - KeyElement: 21
+    ValueElement: Honeycomb
+  - KeyElement: 22
+    ValueElement: Ice
+  - KeyElement: 23
+    ValueElement: Inferno
+  - KeyElement: 24
+    ValueElement: Jade
+  - KeyElement: 25
+    ValueElement: Light Blue
+  - KeyElement: 26
+    ValueElement: Loam
+  - KeyElement: 27
+    ValueElement: Marine
+  - KeyElement: 28
+    ValueElement: Mary
+  - KeyElement: 29
+    ValueElement: Matte Black
+  - KeyElement: 30
+    ValueElement: Matte Blue
+  - KeyElement: 31
+    ValueElement: Matte Gray
+  - KeyElement: 32
+    ValueElement: Matte Green
+  - KeyElement: 33
+    ValueElement: Matte Navy
+  - KeyElement: 34
+    ValueElement: Matte Orange
+  - KeyElement: 35
+    ValueElement: Matte Red
+  - KeyElement: 36
+    ValueElement: Matte Rose
+  - KeyElement: 37
+    ValueElement: Matte Violet
+  - KeyElement: 38
+    ValueElement: Matte White
+  - KeyElement: 39
+    ValueElement: Matte Yellow
+  - KeyElement: 40
+    ValueElement: Needle
+  - KeyElement: 41
+    ValueElement: Noise
+  - KeyElement: 42
+    ValueElement: North
+  - KeyElement: 43
+    ValueElement: Orange
+  - KeyElement: 44
+    ValueElement: Patina
+  - KeyElement: 45
+    ValueElement: Pink
+  - KeyElement: 46
+    ValueElement: Polar
+  - KeyElement: 47
+    ValueElement: Prodigy
+  - KeyElement: 48
+    ValueElement: Radiation
+  - KeyElement: 49
+    ValueElement: Red
+  - KeyElement: 50
+    ValueElement: Red Banner
+  - KeyElement: 51
+    ValueElement: Rivets
+  - KeyElement: 52
+    ValueElement: Rock
+  - KeyElement: 53
+    ValueElement: Roger
+  - KeyElement: 54
+    ValueElement: Rust
+  - KeyElement: 55
+    ValueElement: Savannah
+  - KeyElement: 56
+    ValueElement: Smoke
+  - KeyElement: 57
+    ValueElement: Sport
+  - KeyElement: 58
+    ValueElement: Spring Colors
+  - KeyElement: 59
+    ValueElement: Starry Sky
+  - KeyElement: 60
+    ValueElement: Steel
+  - KeyElement: 61
+    ValueElement: Stone
+  - KeyElement: 62
+    ValueElement: Swamp
+  - KeyElement: 63
+    ValueElement: Swash
+  - KeyElement: 64
+    ValueElement: Taiga
+  - KeyElement: 65
+    ValueElement: Tar
+  - KeyElement: 66
+    ValueElement: Termite
+  - KeyElement: 67
+    ValueElement: Triangle
+  - KeyElement: 68
+    ValueElement: Tundra
+  - KeyElement: 69
+    ValueElement: Universe
+  - KeyElement: 70
+    ValueElement: Urban
+  - KeyElement: 71
+    ValueElement: Vostok-1
+  - KeyElement: 72
+    ValueElement: Winter
+  - KeyElement: 73
+    ValueElement: Yellow

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1d65268f5887f4d99df290f19a83f2, type: 3}
+  m_Name: RicochetAmmunitions
+  m_EditorClassIdentifier: 
+  TurretOwned: 6
+  _ammunitions:
+  - {fileID: 11400000, guid: 23f4b14edabe19641a7ed84f0a5b7d71, type: 2}
+  - {fileID: 11400000, guid: 16dabc466283f134a98bc62a1ca4470a, type: 2}
+  - {fileID: 11400000, guid: afcea5fe9bfc9c1449087c7e659b5c87, type: 2}
+  - {fileID: 11400000, guid: 6511e053186216149a539dc198b5e896, type: 2}
+  - {fileID: 11400000, guid: 1c23237a38e6b4d47a4360588f009a41, type: 2}
+  - {fileID: 11400000, guid: 00f548b369db5d548b74fd21a7e69dd5, type: 2}

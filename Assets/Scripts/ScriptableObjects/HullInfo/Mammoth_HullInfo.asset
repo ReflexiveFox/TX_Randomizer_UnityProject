@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412a7e97e59df0441af8714747c9ec5c, type: 3}
+  m_Name: Mammoth_HullInfo
+  m_EditorClassIdentifier: 
+  BaseInfo:
+    HullName: 4
+    Icon: {fileID: 21300000, guid: 46f3571afa46d9f49a24e1ae591554b5, type: 3}
+  Skins:
+  - {fileID: 11400000, guid: 32082cd152cb89742a3953d87a80d6a7, type: 2}
+  - {fileID: 11400000, guid: be7aa5aa58f0306458046c7167b9426b, type: 2}
+  - {fileID: 11400000, guid: 1a24512210beefb469e50a3f96d1efd3, type: 2}
+  - {fileID: 11400000, guid: 24f447f4d4a20964c9b783efaa75242b, type: 2}
+  - {fileID: 11400000, guid: 81b521eff79728b4e84cd8b185827440, type: 2}
+  - {fileID: 11400000, guid: ad70e21c83870dd4db11ccb4a8d9bbe9, type: 2}

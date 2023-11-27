@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1d65268f5887f4d99df290f19a83f2, type: 3}
+  m_Name: TwinsAmmunitions
+  m_EditorClassIdentifier: 
+  TurretOwned: 10
+  _ammunitions:
+  - {fileID: 11400000, guid: eb8d10a8871070c46b3df1ae6821be59, type: 2}
+  - {fileID: 11400000, guid: e89491923508c5943aa65b37d4fbe93b, type: 2}
+  - {fileID: 11400000, guid: 19c7b9de551c2154e806aefdde7fb4d8, type: 2}
+  - {fileID: 11400000, guid: 5cf6ceedc879b7742b71a1f84e6be19c, type: 2}
+  - {fileID: 11400000, guid: 999899df775b4ba4d93ad5f4f05a8e91, type: 2}
+  - {fileID: 11400000, guid: 93ec7a734cf125e4787c812ec5c5b655, type: 2}

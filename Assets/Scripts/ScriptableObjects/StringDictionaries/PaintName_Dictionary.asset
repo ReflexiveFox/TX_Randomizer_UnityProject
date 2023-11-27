@@ -1,0 +1,251 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 430e5a20db6facf4f91bbbdab88c8b6a, type: 3}
+  m_Name: PaintName_Dictionary
+  m_EditorClassIdentifier: 
+  Dictionary:
+  - KeyElement: 0
+    ValueElement: None
+  - KeyElement: 1
+    ValueElement: Ana Vatan
+  - KeyElement: 2
+    ValueElement: Andromeda
+  - KeyElement: 3
+    ValueElement: Antaeus
+  - KeyElement: 4
+    ValueElement: Antarctica
+  - KeyElement: 5
+    ValueElement: Antares
+  - KeyElement: 6
+    ValueElement: Arrows Of Love
+  - KeyElement: 7
+    ValueElement: Autumn Leaves
+  - KeyElement: 8
+    ValueElement: Bananas
+  - KeyElement: 9
+    ValueElement: Beta Tester
+  - KeyElement: 10
+    ValueElement: Black Roger
+  - KeyElement: 11
+    ValueElement: Blue
+  - KeyElement: 12
+    ValueElement: Bronze League
+  - KeyElement: 13
+    ValueElement: Candy
+  - KeyElement: 14
+    ValueElement: Canyon
+  - KeyElement: 15
+    ValueElement: Carbon
+  - KeyElement: 16
+    ValueElement: Cedar
+  - KeyElement: 17
+    ValueElement: Champion
+  - KeyElement: 18
+    ValueElement: Clay
+  - KeyElement: 19
+    ValueElement: Coal
+  - KeyElement: 20
+    ValueElement: Corrosion
+  - KeyElement: 21
+    ValueElement: Depth
+  - KeyElement: 22
+    ValueElement: Desert
+  - KeyElement: 23
+    ValueElement: Digital
+  - KeyElement: 24
+    ValueElement: Dirty
+  - KeyElement: 25
+    ValueElement: Dragon
+  - KeyElement: 26
+    ValueElement: Eastern Star
+  - KeyElement: 27
+    ValueElement: Emerald
+  - KeyElement: 28
+    ValueElement: Flame
+  - KeyElement: 29
+    ValueElement: Flora
+  - KeyElement: 30
+    ValueElement: Forester
+  - KeyElement: 31
+    ValueElement: Freedom
+  - KeyElement: 32
+    ValueElement: Frontier
+  - KeyElement: 33
+    ValueElement: Galaxy
+  - KeyElement: 34
+    ValueElement: Glacier
+  - KeyElement: 35
+    ValueElement: Gold
+  - KeyElement: 36
+    ValueElement: Gold League
+  - KeyElement: 37
+    ValueElement: Green
+  - KeyElement: 38
+    ValueElement: Guerrilla
+  - KeyElement: 39
+    ValueElement: Halloween
+  - KeyElement: 40
+    ValueElement: Halloween 2017
+  - KeyElement: 41
+    ValueElement: Hero
+  - KeyElement: 42
+    ValueElement: Honeycomb
+  - KeyElement: 43
+    ValueElement: Hydra
+  - KeyElement: 44
+    ValueElement: Ice
+  - KeyElement: 45
+    ValueElement: Inferno
+  - KeyElement: 46
+    ValueElement: Jade
+  - KeyElement: 47
+    ValueElement: Lemon Caramel
+  - KeyElement: 48
+    ValueElement: Light Blue
+  - KeyElement: 49
+    ValueElement: Loam
+  - KeyElement: 50
+    ValueElement: Lollipop
+  - KeyElement: 51
+    ValueElement: Marine
+  - KeyElement: 52
+    ValueElement: Mars Stars
+  - KeyElement: 53
+    ValueElement: Mary
+  - KeyElement: 54
+    ValueElement: Master League
+  - KeyElement: 55
+    ValueElement: Matte Black
+  - KeyElement: 56
+    ValueElement: Matte Blue
+  - KeyElement: 57
+    ValueElement: Matte Gray
+  - KeyElement: 58
+    ValueElement: Matte Green
+  - KeyElement: 59
+    ValueElement: Matte Navy
+  - KeyElement: 60
+    ValueElement: Matte Orange
+  - KeyElement: 61
+    ValueElement: Matte Red
+  - KeyElement: 62
+    ValueElement: Matte Rose
+  - KeyElement: 63
+    ValueElement: Matte Violet
+  - KeyElement: 64
+    ValueElement: Matte White
+  - KeyElement: 65
+    ValueElement: Matte Yellow
+  - KeyElement: 66
+    ValueElement: Military
+  - KeyElement: 67
+    ValueElement: Mosaic
+  - KeyElement: 68
+    ValueElement: Needle
+  - KeyElement: 69
+    ValueElement: Noise
+  - KeyElement: 70
+    ValueElement: North
+  - KeyElement: 71
+    ValueElement: Orange
+  - KeyElement: 72
+    ValueElement: Orion
+  - KeyElement: 73
+    ValueElement: Patina
+  - KeyElement: 74
+    ValueElement: Pink
+  - KeyElement: 75
+    ValueElement: Polar
+  - KeyElement: 76
+    ValueElement: Prodigy
+  - KeyElement: 77
+    ValueElement: Radiation
+  - KeyElement: 78
+    ValueElement: Red
+  - KeyElement: 79
+    ValueElement: Red Amber
+  - KeyElement: 80
+    ValueElement: Red Banner
+  - KeyElement: 81
+    ValueElement: Rivets
+  - KeyElement: 82
+    ValueElement: Rock
+  - KeyElement: 83
+    ValueElement: Roger
+  - KeyElement: 84
+    ValueElement: Rust
+  - KeyElement: 85
+    ValueElement: Sandstone
+  - KeyElement: 86
+    ValueElement: Savannah
+  - KeyElement: 87
+    ValueElement: Silver League
+  - KeyElement: 88
+    ValueElement: Smoke
+  - KeyElement: 89
+    ValueElement: Spark
+  - KeyElement: 90
+    ValueElement: Spectre
+  - KeyElement: 91
+    ValueElement: Spider Web
+  - KeyElement: 92
+    ValueElement: Sport
+  - KeyElement: 93
+    ValueElement: Spring Colors
+  - KeyElement: 94
+    ValueElement: Starry Sky
+  - KeyElement: 95
+    ValueElement: Steamulator (F)
+  - KeyElement: 96
+    ValueElement: Steamulator (SF)
+  - KeyElement: 97
+    ValueElement: Steel
+  - KeyElement: 98
+    ValueElement: Stone
+  - KeyElement: 99
+    ValueElement: Storm
+  - KeyElement: 100
+    ValueElement: Summer
+  - KeyElement: 101
+    ValueElement: Swamp
+  - KeyElement: 102
+    ValueElement: Swash
+  - KeyElement: 103
+    ValueElement: TX 1 Year
+  - KeyElement: 104
+    ValueElement: Taiga
+  - KeyElement: 105
+    ValueElement: Tanki In Moscow
+  - KeyElement: 106
+    ValueElement: Tar
+  - KeyElement: 107
+    ValueElement: Termite
+  - KeyElement: 108
+    ValueElement: The Beginning
+  - KeyElement: 109
+    ValueElement: Triangle
+  - KeyElement: 110
+    ValueElement: Trollface
+  - KeyElement: 111
+    ValueElement: Tundra
+  - KeyElement: 112
+    ValueElement: Universe
+  - KeyElement: 113
+    ValueElement: Urban
+  - KeyElement: 114
+    ValueElement: Vostok-1
+  - KeyElement: 115
+    ValueElement: Winter
+  - KeyElement: 116
+    ValueElement: World Cup 2018
+  - KeyElement: 117
+    ValueElement: Yellow

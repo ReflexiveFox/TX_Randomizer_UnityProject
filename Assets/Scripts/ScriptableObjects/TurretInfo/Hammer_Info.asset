@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023b122739a6db54db1d08716e35d8a4, type: 3}
+  m_Name: Hammer_Info
+  m_EditorClassIdentifier: 
+  BaseInfo:
+    TurretName: 3
+    Icon: {fileID: 21300000, guid: 23393ac42ce03b344a2bc3c679ee95b4, type: 3}
+  Skins:
+  - {fileID: 11400000, guid: c43a0403206994443a79ca5736ba1603, type: 2}
+  - {fileID: 11400000, guid: 95c9663219888124b8ca43e5c07b4a24, type: 2}
+  - {fileID: 11400000, guid: df3e9241cbedeb441951257443d338ce, type: 2}
+  - {fileID: 11400000, guid: 339895843cf0a49498522624cd008503, type: 2}
+  - {fileID: 11400000, guid: 7518e2429925c2741b4fdcf8563e6e83, type: 2}
+  - {fileID: 11400000, guid: 4085e404d8076f04f819d4ed938b4549, type: 2}
+  - {fileID: 11400000, guid: 917aad23807f7944c86d04513af1cfba, type: 2}
+  - {fileID: 11400000, guid: 5cde75f78c0e67144b02ffd5960bb346, type: 2}
+  - {fileID: 11400000, guid: 7dd58bcaa0a3bf9478057e1fecef1f99, type: 2}
+  Ammunitions:
+  - {fileID: 11400000, guid: 5e59be50f8950f84892e483507fd3247, type: 2}
+  - {fileID: 11400000, guid: dd47b27ce47757943996959f46dca732, type: 2}
+  - {fileID: 11400000, guid: 8ad38a7de5675b4468b8c1023b8fc034, type: 2}

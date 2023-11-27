@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da30081c3c0ff124f8f0a36fcfd992ae, type: 3}
+  m_Name: MapName_Dictionary
+  m_EditorClassIdentifier: 
+  Dictionary:
+  - KeyElement: 0
+    ValueElement: None
+  - KeyElement: 1
+    ValueElement: Arabian Night
+  - KeyElement: 2
+    ValueElement: Area 159
+  - KeyElement: 3
+    ValueElement: Ares
+  - KeyElement: 4
+    ValueElement: Iran
+  - KeyElement: 5
+    ValueElement: Kungur
+  - KeyElement: 6
+    ValueElement: Moon Silence
+  - KeyElement: 7
+    ValueElement: Rio
+  - KeyElement: 8
+    ValueElement: Sandbox
+  - KeyElement: 9
+    ValueElement: Silence
+  - KeyElement: 10
+    ValueElement: West Prime
+  - KeyElement: 11
+    ValueElement: Massacre
+  - KeyElement: 12
+    ValueElement: Repin
+  - KeyElement: 13
+    ValueElement: Lake Hell
+  - KeyElement: 14
+    ValueElement: Old School

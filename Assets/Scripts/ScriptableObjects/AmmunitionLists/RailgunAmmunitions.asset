@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1d65268f5887f4d99df290f19a83f2, type: 3}
+  m_Name: RailgunAmmunitions
+  m_EditorClassIdentifier: 
+  TurretOwned: 5
+  _ammunitions:
+  - {fileID: 11400000, guid: a6e9b729f8a385a4f8c0087a749c4f5b, type: 2}
+  - {fileID: 11400000, guid: 5acd50a6f16e5ec4d928df61bb51f661, type: 2}
+  - {fileID: 11400000, guid: 02346146409e4514b872a7c07031af50, type: 2}
+  - {fileID: 11400000, guid: 1032105d05934924294f2893d759efea, type: 2}
+  - {fileID: 11400000, guid: 7ad8469e2850c29499cdbb24fd41bba5, type: 2}
+  - {fileID: 11400000, guid: 6f8dcd92f6fb2e042b1150da3b747e3b, type: 2}
+  - {fileID: 11400000, guid: fbff777a8c48cd54b8ade56ce781809f, type: 2}

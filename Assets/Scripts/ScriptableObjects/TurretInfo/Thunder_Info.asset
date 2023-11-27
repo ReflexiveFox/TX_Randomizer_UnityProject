@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023b122739a6db54db1d08716e35d8a4, type: 3}
+  m_Name: Thunder_Info
+  m_EditorClassIdentifier: 
+  BaseInfo:
+    TurretName: 9
+    Icon: {fileID: 21300000, guid: 8d13558b47ad0a94a931d8647359cfbf, type: 3}
+  Skins:
+  - {fileID: 11400000, guid: fcee52668a3e47e4f921d1ff34e6bcc0, type: 2}
+  - {fileID: 11400000, guid: 17c7d33f615af6247872aa6e934295a9, type: 2}
+  - {fileID: 11400000, guid: fa7f2bbcae089ba4190809911f029416, type: 2}
+  - {fileID: 11400000, guid: a1cbcb4ac8537144dbd863a0c50542a8, type: 2}
+  - {fileID: 11400000, guid: f26d99b3f015ce140a0e068e399da43e, type: 2}
+  - {fileID: 11400000, guid: 132d7446ca0b11e42a4122ff38e6453a, type: 2}
+  - {fileID: 11400000, guid: dc34ab361e18ebe4db9c6f803070554d, type: 2}
+  - {fileID: 11400000, guid: ae5105e078a5ad54fb20c5e363b406ca, type: 2}
+  - {fileID: 11400000, guid: 6dc428e469caa3f45b9613be8d6aa969, type: 2}
+  Ammunitions:
+  - {fileID: 11400000, guid: 4850476daa203ec4e9ea5cc734f02b13, type: 2}
+  - {fileID: 11400000, guid: 30716360c6fe1ed4abf28b4f9d8521b4, type: 2}
+  - {fileID: 11400000, guid: 0f16a6f8498ec574796487af4713a587, type: 2}

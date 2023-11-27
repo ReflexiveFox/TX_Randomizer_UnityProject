@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18f5eb8e8c6f6a147bd86ae4a1806f9a, type: 3}
+  m_Name: AmmunitionName_Dictionary
+  m_EditorClassIdentifier: 
+  Dictionary:
+  - KeyElement: 0
+    ValueElement: None
+  - KeyElement: 1
+    ValueElement: Standard
+  - KeyElement: 2
+    ValueElement: Orange
+  - KeyElement: 3
+    ValueElement: Red
+  - KeyElement: 4
+    ValueElement: Acid
+  - KeyElement: 5
+    ValueElement: Sky Blue
+  - KeyElement: 6
+    ValueElement: Indigo
+  - KeyElement: 7
+    ValueElement: White
+  - KeyElement: 8
+    ValueElement: Thor
+  - KeyElement: 9
+    ValueElement: Papercracker
+  - KeyElement: 10
+    ValueElement: Emerald
+  - KeyElement: 11
+    ValueElement: Shine
+  - KeyElement: 12
+    ValueElement: Pale Blue
+  - KeyElement: 13
+    ValueElement: Pale Green
+  - KeyElement: 14
+    ValueElement: Purple
+  - KeyElement: 15
+    ValueElement: Gloom
+  - KeyElement: 16
+    ValueElement: Smoke
+  - KeyElement: 17
+    ValueElement: Beta Tester
+  - KeyElement: 18
+    ValueElement: Golden
+  - KeyElement: 19
+    ValueElement: Coral
+  - KeyElement: 20
+    ValueElement: Frozen
+  - KeyElement: 21
+    ValueElement: Moon
+  - KeyElement: 22
+    ValueElement: Cannonball
+  - KeyElement: 23
+    ValueElement: Antaeus
+  - KeyElement: 24
+    ValueElement: Frontier
+  - KeyElement: 25
+    ValueElement: Lightning
+  - KeyElement: 26
+    ValueElement: Thermite
+  - KeyElement: 27
+    ValueElement: Dragon
+  - KeyElement: 28
+    ValueElement: Blue
+  - KeyElement: 29
+    ValueElement: Tourquoise
+  - KeyElement: 30
+    ValueElement: Violet
+  - KeyElement: 31
+    ValueElement: ' Acid Rain'

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1d65268f5887f4d99df290f19a83f2, type: 3}
+  m_Name: ShaftAmmunitions
+  m_EditorClassIdentifier: 
+  TurretOwned: 7
+  _ammunitions:
+  - {fileID: 11400000, guid: 94383fe54b6ec7245aad2a0cf6e94225, type: 2}
+  - {fileID: 11400000, guid: ac9ba9d87d173f24dbc83db860fd4721, type: 2}
+  - {fileID: 11400000, guid: 8cd4f7ea5ef2d054d98679be30613323, type: 2}
+  - {fileID: 11400000, guid: 01f93ef8f8ca607418f840a55f1f146c, type: 2}

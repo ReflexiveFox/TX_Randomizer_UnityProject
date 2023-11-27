@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412a7e97e59df0441af8714747c9ec5c, type: 3}
+  m_Name: Hunter_HullInfo
+  m_EditorClassIdentifier: 
+  BaseInfo:
+    HullName: 3
+    Icon: {fileID: 21300000, guid: eb375d03694fbc74d96f5a6ed3be70ab, type: 3}
+  Skins:
+  - {fileID: 11400000, guid: 27cc1c2a9254529459d04486a136e1d1, type: 2}
+  - {fileID: 11400000, guid: 30492b562794cc6478ad7f40b08c6c1a, type: 2}
+  - {fileID: 11400000, guid: 639d88bbe57d8284ea86f87362404b44, type: 2}
+  - {fileID: 11400000, guid: 453af07a9990f8a46873f4829fe85da8, type: 2}
+  - {fileID: 11400000, guid: 4ee14b22a5e97334ea8f7a6d541ae601, type: 2}
+  - {fileID: 11400000, guid: bb7dce85c7cc2704eb4635eaa14d8a44, type: 2}
+  - {fileID: 11400000, guid: a4b0d5bb81489c2439939a0d04f53aa6, type: 2}
+  - {fileID: 11400000, guid: 47d506a64c7bb2647983d9ffa25ee652, type: 2}
+  - {fileID: 11400000, guid: 40ed61cb557f0644ebad22a38bbe2122, type: 2}

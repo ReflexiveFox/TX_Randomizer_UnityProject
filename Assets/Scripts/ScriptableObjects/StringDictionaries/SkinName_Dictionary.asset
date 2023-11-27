@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635307852a57bf54ebb48989bb01f053, type: 3}
+  m_Name: SkinName_Dictionary
+  m_EditorClassIdentifier: 
+  Dictionary:
+  - KeyElement: 0
+    ValueElement: Tier 0
+  - KeyElement: 1
+    ValueElement: Tier 1
+  - KeyElement: 2
+    ValueElement: Tier 2
+  - KeyElement: 3
+    ValueElement: Bumblebee-83
+  - KeyElement: 4
+    ValueElement: Crystal
+  - KeyElement: 5
+    ValueElement: Crystal Discharge
+  - KeyElement: 6
+    ValueElement: Crystal Glow
+  - KeyElement: 7
+    ValueElement: Crystal Rage
+  - KeyElement: 8
+    ValueElement: Defender
+  - KeyElement: 9
+    ValueElement: Dreadnought
+  - KeyElement: 10
+    ValueElement: Frontier Zero
+  - KeyElement: 11
+    ValueElement: Frost
+  - KeyElement: 12
+    ValueElement: Gold
+  - KeyElement: 13
+    ValueElement: Inferno
+  - KeyElement: 14
+    ValueElement: Steam
+  - KeyElement: 15
+    ValueElement: Steel
+  - KeyElement: 16
+    ValueElement: T-0
+  - KeyElement: 17
+    ValueElement: Beta
+  - KeyElement: 18
+    ValueElement: TSK
+  - KeyElement: 19
+    ValueElement: 2.0
+  - KeyElement: 20
+    ValueElement: Victory Day
+  - KeyElement: 21
+    ValueElement: XT
+  - KeyElement: 22
+    ValueElement: XT Zeus

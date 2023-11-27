@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb1d65268f5887f4d99df290f19a83f2, type: 3}
+  m_Name: SmokiAmmunitions
+  m_EditorClassIdentifier: 
+  TurretOwned: 8
+  _ammunitions:
+  - {fileID: 11400000, guid: 886313d3b14f55742b80f23d2931e50d, type: 2}
+  - {fileID: 11400000, guid: 6e00a5f1e39b368458aac0545ac6c51e, type: 2}
+  - {fileID: 11400000, guid: 8e079fdc39b978447a281e396fe43dcf, type: 2}
+  - {fileID: 11400000, guid: 74d4b501cbe11ac4e86e4522632d4419, type: 2}

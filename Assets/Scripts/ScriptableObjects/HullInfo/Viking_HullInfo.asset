@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412a7e97e59df0441af8714747c9ec5c, type: 3}
+  m_Name: Viking_HullInfo
+  m_EditorClassIdentifier: 
+  BaseInfo:
+    HullName: 6
+    Icon: {fileID: 21300000, guid: 5ed894a9d9167194fb4284f17bcb66fa, type: 3}
+  Skins:
+  - {fileID: 11400000, guid: 957c49e423dbd394692c4846dd721720, type: 2}
+  - {fileID: 11400000, guid: 64e92d0ab5ebc5042bec610646036df9, type: 2}
+  - {fileID: 11400000, guid: ef29513f6bbf7e544913f67a4ae2d967, type: 2}
+  - {fileID: 11400000, guid: e58ab139410da4549a6d52b577fe8ef3, type: 2}
+  - {fileID: 11400000, guid: a351ba7a8b4c3e445a7a50e07dbc4bf7, type: 2}
+  - {fileID: 11400000, guid: e411f0964bea7ab499061912c08a587f, type: 2}
+  - {fileID: 11400000, guid: 91962f0faa098d942bff29985074e923, type: 2}
+  - {fileID: 11400000, guid: 74ae2b18eb2883b43aaa2c23e2ca48d1, type: 2}
+  - {fileID: 11400000, guid: cc9ec465d9a463e4bb81d1c93aba8368, type: 2}
+  - {fileID: 11400000, guid: e0728719b9d5e0649b36df8ae40b2b89, type: 2}
+  - {fileID: 11400000, guid: 046e444478333b744b42c13ac4d521d3, type: 2}
+  - {fileID: 11400000, guid: 976733ee743350f48b217503f8e1195d, type: 2}
+  - {fileID: 11400000, guid: de5752669890fbe4193bbc25b5137b5b, type: 2}

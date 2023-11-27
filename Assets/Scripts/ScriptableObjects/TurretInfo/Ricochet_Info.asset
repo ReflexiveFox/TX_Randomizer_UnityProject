@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023b122739a6db54db1d08716e35d8a4, type: 3}
+  m_Name: Ricochet_Info
+  m_EditorClassIdentifier: 
+  BaseInfo:
+    TurretName: 6
+    Icon: {fileID: 21300000, guid: 13912377cefbaa84aaf872e9f06c5613, type: 3}
+  Skins:
+  - {fileID: 11400000, guid: 25466513597f0ac45961300bda3542eb, type: 2}
+  - {fileID: 11400000, guid: ef64717643740644ea311414af62a590, type: 2}
+  - {fileID: 11400000, guid: e3eb5895cf30c23419fabf568c8c0cab, type: 2}
+  - {fileID: 11400000, guid: 05e0c8be430dc4b43a422d51bf3bd689, type: 2}
+  - {fileID: 11400000, guid: cf10116b091a7344a8b37df1eb051b82, type: 2}
+  - {fileID: 11400000, guid: be48ef637594aa34db86426164515d86, type: 2}
+  Ammunitions:
+  - {fileID: 11400000, guid: 23f4b14edabe19641a7ed84f0a5b7d71, type: 2}
+  - {fileID: 11400000, guid: 16dabc466283f134a98bc62a1ca4470a, type: 2}
+  - {fileID: 11400000, guid: afcea5fe9bfc9c1449087c7e659b5c87, type: 2}
+  - {fileID: 11400000, guid: 6511e053186216149a539dc198b5e896, type: 2}
+  - {fileID: 11400000, guid: 1c23237a38e6b4d47a4360588f009a41, type: 2}
+  - {fileID: 11400000, guid: 00f548b369db5d548b74fd21a7e69dd5, type: 2}

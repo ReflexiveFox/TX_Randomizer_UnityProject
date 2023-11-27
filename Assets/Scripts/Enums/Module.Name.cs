@@ -1,0 +1,39 @@
+﻿namespace TX_Randomizer
+{
+    public partial class Module
+    {
+        public enum Name
+        {
+            NotDefined,
+            EnhancedArmor,
+            TurboSpeed,
+            ForceField,
+            Invisibility,
+            ImpulseJump,
+            IceTrap,
+            Invulnerability,
+            FieryRing,
+            RepairKit,
+            Mine,
+            SpiderMine,
+            EMP,
+            Radar,
+            IncreasedDamage,
+            ImpulseGenerator,
+            TurretDrone,
+            ExtraMagazine,
+            ExplosiveMass,
+            Engineer,
+            Rage,
+            Adrenaline,
+            Kamikaze,
+            Lifesteal,
+            TemperatureBlock,
+            BackhitDefense,
+            BackhitIncrease,
+            AcceleratedGears,
+            Sapper,
+            EmergencyProtection
+        }
+    }
+}

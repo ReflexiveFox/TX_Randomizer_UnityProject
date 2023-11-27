@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 023b122739a6db54db1d08716e35d8a4, type: 3}
+  m_Name: Smoki_Info
+  m_EditorClassIdentifier: 
+  BaseInfo:
+    TurretName: 8
+    Icon: {fileID: 21300000, guid: 0fedb59e072fb8f448d4d62fa84963c9, type: 3}
+  Skins:
+  - {fileID: 11400000, guid: b807bef2dafdd0c4db0995b79a9a9569, type: 2}
+  - {fileID: 11400000, guid: 3b376ad0209ae6144b035a8fa448c810, type: 2}
+  - {fileID: 11400000, guid: b688abf4e80f36348a4639463dde6818, type: 2}
+  - {fileID: 11400000, guid: 4e9df66673ca7584ca5874f02224f6c4, type: 2}
+  - {fileID: 11400000, guid: 0e148dffaef66a144a059b298fbf354f, type: 2}
+  - {fileID: 11400000, guid: 1b3e4045912e1c249b11ad18a41f2d12, type: 2}
+  - {fileID: 11400000, guid: 274b35d1a3501de4a9f44f89d66d2a59, type: 2}
+  - {fileID: 11400000, guid: 9d72cb1b684326446904781d0938169e, type: 2}
+  - {fileID: 11400000, guid: 938a5e7cdf9dd154bb78491c56285f20, type: 2}
+  Ammunitions:
+  - {fileID: 11400000, guid: 886313d3b14f55742b80f23d2931e50d, type: 2}
+  - {fileID: 11400000, guid: 6e00a5f1e39b368458aac0545ac6c51e, type: 2}
+  - {fileID: 11400000, guid: 8e079fdc39b978447a281e396fe43dcf, type: 2}
+  - {fileID: 11400000, guid: 74d4b501cbe11ac4e86e4522632d4419, type: 2}
