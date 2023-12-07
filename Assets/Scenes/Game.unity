@@ -2723,6 +2723,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4206278af4c03aa44bf65afb8a43f4fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _randomizedCombo:
+    _turret:
+      _baseInfo:
+        TurretName: 0
+        Icon: {fileID: 0}
+      _skin: {fileID: 0}
+      _ammunition: {fileID: 0}
+    _coating: {fileID: 0}
+    _hull:
+      _baseInfo:
+        HullName: 0
+        Icon: {fileID: 0}
+      _skin: {fileID: 0}
+    _paint: {fileID: 0}
+    _modules:
+      Modules:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
 --- !u!1 &638275112 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1915084024247035797, guid: 27ad946b4c56ebd418a925032f65fd5e, type: 3}
@@ -2959,7 +2981,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010622634}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -3820,28 +3842,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21587d50bfe06cc4caf142d1c25792d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _turret:
-    _baseInfo:
-      TurretName: 0
-      Icon: {fileID: 0}
-    _skin: {fileID: 0}
+  PlayerCombo:
+    _turret:
+      _baseInfo:
+        TurretName: 0
+        Icon: {fileID: 0}
+      _skin: {fileID: 0}
+      _ammunition: {fileID: 0}
     _coating: {fileID: 0}
-    _ammunition: {fileID: 0}
-  _hull:
-    BaseInfo:
-      HullName: 0
-      Icon: {fileID: 0}
-    Skin: {fileID: 0}
+    _hull:
+      _baseInfo:
+        HullName: 0
+        Icon: {fileID: 0}
+      _skin: {fileID: 0}
     _paint: {fileID: 0}
-  _modules:
-    Modules:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-  Ammunition: {fileID: 0}
+    _modules:
+      Modules:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
 --- !u!4 &1078280539
 Transform:
   m_ObjectHideFlags: 0
@@ -4093,7 +4115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb58f59d30fb9940b5a7097d96937de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  contentImage: {fileID: 1793241964}
+  applyDefaultAmmo: 0
 --- !u!114 &1256981378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5628,7 +5650,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2108086421}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}
