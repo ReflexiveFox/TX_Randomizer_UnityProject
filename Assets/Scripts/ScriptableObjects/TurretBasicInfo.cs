@@ -8,10 +8,10 @@ namespace TX_Randomizer
         public Name TurretName = Name.None;
         public Sprite Icon;
 
-        public TurretBasicInfo()
+        public TurretBasicInfo(Name newTurretName)
         {
-            TurretName = Name.None;
-            Icon = null;
+            TurretName = newTurretName;
+            Icon = TankWiki.Instance.GetTurretInfo(newTurretName).BaseInfo.Icon;
         }
     }
 }

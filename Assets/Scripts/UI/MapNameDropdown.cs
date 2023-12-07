@@ -15,7 +15,7 @@ namespace TX_Randomizer
         {
             BattleInfo.OnMapChanged += ApplyMapName;
             dropdown.onValueChanged.AddListener(ApplyMapPanel);
-            CreateDropdownOptionsList(TankWiki.instance.Maps);
+            CreateDropdownOptionsList(TankWiki.Instance.Maps);
         }
 
         private void OnDestroy()
@@ -26,7 +26,7 @@ namespace TX_Randomizer
 
         private void ApplyMapPanel(int mapIndex)
         {
-            List<Map> copyList = new(TankWiki.instance.Maps);
+            List<Map> copyList = new(TankWiki.Instance.Maps);
 
             for(int i = 0; i < copyList.Count; i++)
             {
@@ -34,7 +34,7 @@ namespace TX_Randomizer
                 {
                     map = copyList[i];
                     contentImage.sprite = map.Sprite;
-                    mapText.text = TankWiki.instance.MapNamesDictionary.GetString(map.MapName);
+                    mapText.text = TankWiki.Instance.MapNamesDictionary.GetString(map.MapName);
                 }
             }
         }
@@ -44,7 +44,7 @@ namespace TX_Randomizer
             map = BattleInfo.Map;
             for (int i = 0; i < dropdown.options.Count; i++)
             {
-                if (dropdown.options[i].text == TankWiki.instance.MapNamesDictionary.GetString(map.MapName))
+                if (dropdown.options[i].text == TankWiki.Instance.MapNamesDictionary.GetString(map.MapName))
                 {
                     dropdown.value = i;
                     ApplyMapPanel(i);
@@ -60,7 +60,7 @@ namespace TX_Randomizer
             dropdown.ClearOptions();
             foreach (Map map in mapList)
             {
-                options.Add(new TMP_Dropdown.OptionData(TankWiki.instance.MapNamesDictionary.GetString(map.MapName)));
+                options.Add(new TMP_Dropdown.OptionData(TankWiki.Instance.MapNamesDictionary.GetString(map.MapName)));
             }
             dropdown.AddOptions(options);
         }

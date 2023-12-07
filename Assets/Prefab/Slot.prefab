@@ -407,7 +407,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45.7
+  m_fontSize: 28.05
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1838,7 +1838,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.1
+  m_fontSize: 30.45
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2724,7 +2724,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2208668878220688048, guid: b705fa0c3f267ae449f5b1267132729d, type: 3}
       propertyPath: m_fontSize
-      value: 34.1
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 2208668878451025678, guid: b705fa0c3f267ae449f5b1267132729d, type: 3}
       propertyPath: m_Pivot.x
@@ -2848,7 +2848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2208668878220688048, guid: b705fa0c3f267ae449f5b1267132729d, type: 3}
       propertyPath: m_fontSize
-      value: 44.05
+      value: 20.45
       objectReference: {fileID: 0}
     - target: {fileID: 2208668878451025677, guid: b705fa0c3f267ae449f5b1267132729d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

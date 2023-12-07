@@ -7,6 +7,6 @@ namespace TX_Randomizer
     {
         [SerializeField] private HullBasicInfo.Name _hullOwned;
 
-        public HullBasicInfo.Name TurretOwned => _hullOwned;
+        public HullBasicInfo.Name HullOwned => _hullOwned;
     }
 }

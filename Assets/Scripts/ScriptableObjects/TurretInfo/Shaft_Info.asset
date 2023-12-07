@@ -12,18 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023b122739a6db54db1d08716e35d8a4, type: 3}
   m_Name: Shaft_Info
   m_EditorClassIdentifier: 
-  BaseInfo:
+  baseInfo:
     TurretName: 7
-    Icon: {fileID: 21300000, guid: 31044e5aa4629ed4c9a6a26c7adee3d4, type: 3}
-  Skins:
+    Icon: {fileID: 21300000, guid: 90de2b2fb59ed934983267efc02ad1fb, type: 3}
+  skins:
   - {fileID: 11400000, guid: 83079103fd722a3459c0a7c663af4663, type: 2}
   - {fileID: 11400000, guid: fed88ef8b78faf142b2fec882484e556, type: 2}
   - {fileID: 11400000, guid: 52bbc71eb367283409fa8993aa87ca54, type: 2}
   - {fileID: 11400000, guid: 9700d10b086ff574ea9c1a57ec90f858, type: 2}
   - {fileID: 11400000, guid: bb554943cce73f3448159d08337f9318, type: 2}
   - {fileID: 11400000, guid: 65383918e940b8f41baa28b24439df26, type: 2}
-  Ammunitions:
-  - {fileID: 11400000, guid: 94383fe54b6ec7245aad2a0cf6e94225, type: 2}
-  - {fileID: 11400000, guid: ac9ba9d87d173f24dbc83db860fd4721, type: 2}
-  - {fileID: 11400000, guid: 8cd4f7ea5ef2d054d98679be30613323, type: 2}
-  - {fileID: 11400000, guid: 01f93ef8f8ca607418f840a55f1f146c, type: 2}
+  ammunitions: {fileID: 11400000, guid: ea111af6d1527ba4b82ddaae8a1a1312, type: 2}

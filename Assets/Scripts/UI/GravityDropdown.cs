@@ -19,7 +19,7 @@ namespace TX_Randomizer
         {
             for (int i = 0; i < dropdown.options.Count; i++)
             {
-                if (dropdown.options[i].text == TankWiki.instance.GravityNameDictionary.GetString(BattleInfo.Gravity))
+                if (dropdown.options[i].text == TankWiki.Instance.GravityNameDictionary.GetString(BattleInfo.Gravity))
                 {
                     dropdown.value = i;
                     break;
@@ -34,7 +34,7 @@ namespace TX_Randomizer
             dropdown.ClearOptions();
             foreach (BattleInfo.GravityName gravityName in (BattleInfo.GravityName[]) Enum.GetValues(typeof(BattleInfo.GravityName)))
             {
-                options.Add(new TMP_Dropdown.OptionData(TankWiki.instance.GravityNameDictionary.GetString(gravityName)));
+                options.Add(new TMP_Dropdown.OptionData(TankWiki.Instance.GravityNameDictionary.GetString(gravityName)));
             }
             dropdown.AddOptions(options);
         }

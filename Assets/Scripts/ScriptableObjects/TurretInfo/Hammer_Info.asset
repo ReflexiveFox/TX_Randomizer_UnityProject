@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023b122739a6db54db1d08716e35d8a4, type: 3}
   m_Name: Hammer_Info
   m_EditorClassIdentifier: 
-  BaseInfo:
+  baseInfo:
     TurretName: 3
-    Icon: {fileID: 21300000, guid: 23393ac42ce03b344a2bc3c679ee95b4, type: 3}
-  Skins:
+    Icon: {fileID: 21300000, guid: 8ea7e762a1777824da5e7a1b038d639e, type: 3}
+  skins:
   - {fileID: 11400000, guid: c43a0403206994443a79ca5736ba1603, type: 2}
   - {fileID: 11400000, guid: 95c9663219888124b8ca43e5c07b4a24, type: 2}
   - {fileID: 11400000, guid: df3e9241cbedeb441951257443d338ce, type: 2}
@@ -25,7 +25,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 917aad23807f7944c86d04513af1cfba, type: 2}
   - {fileID: 11400000, guid: 5cde75f78c0e67144b02ffd5960bb346, type: 2}
   - {fileID: 11400000, guid: 7dd58bcaa0a3bf9478057e1fecef1f99, type: 2}
-  Ammunitions:
-  - {fileID: 11400000, guid: 5e59be50f8950f84892e483507fd3247, type: 2}
-  - {fileID: 11400000, guid: dd47b27ce47757943996959f46dca732, type: 2}
-  - {fileID: 11400000, guid: 8ad38a7de5675b4468b8c1023b8fc034, type: 2}
+  ammunitions: {fileID: 11400000, guid: fd229f5ba7ef003469650cf8fb603ce4, type: 2}

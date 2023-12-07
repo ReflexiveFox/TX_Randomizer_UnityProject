@@ -12,17 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023b122739a6db54db1d08716e35d8a4, type: 3}
   m_Name: Isida_Info
   m_EditorClassIdentifier: 
-  BaseInfo:
+  baseInfo:
     TurretName: 4
-    Icon: {fileID: 21300000, guid: 07c273e2ed6561a489a2e89837a182f8, type: 3}
-  Skins:
+    Icon: {fileID: 21300000, guid: 938682d338fe5d7439b6868cdb2b8014, type: 3}
+  skins:
   - {fileID: 11400000, guid: 081ac9baa6cb53249b228b6f0e60157d, type: 2}
   - {fileID: 11400000, guid: 2e2b44a943297d74f9886e24704fb78a, type: 2}
   - {fileID: 11400000, guid: 828e4c51835b01349b8d19dd22bf5cc8, type: 2}
   - {fileID: 11400000, guid: d811103108571324da7e660ef408b052, type: 2}
   - {fileID: 11400000, guid: 406a5ad500073eb43b364a1bb5a65394, type: 2}
   - {fileID: 11400000, guid: 439887b4a78697c41bf1da29f30144b3, type: 2}
-  Ammunitions:
-  - {fileID: 11400000, guid: 8f3e3be088bd12f4daaa66f555c7825d, type: 2}
-  - {fileID: 11400000, guid: e7d7e261bf728744ea8c85d8fdffafd3, type: 2}
-  - {fileID: 11400000, guid: c6c0b49ee7e0081478484cce71b5ffd8, type: 2}
+  ammunitions: {fileID: 11400000, guid: d15ba073fbc4f7b4eb1989249fa3389c, type: 2}

@@ -94,7 +94,7 @@ MonoBehaviour:
     TecnologyType: 0
     ActiveType: 0
   ID: 0
-  _moduleImage: {fileID: 7459324710132470061}
+  moduleImage: {fileID: 7459324710132470061}
 --- !u!1 &1361402084527226258
 GameObject:
   m_ObjectHideFlags: 0
@@ -183,6 +183,7 @@ GameObject:
   - component: {fileID: 1524227120813846688}
   - component: {fileID: 3823129296154397065}
   - component: {fileID: 7459324710132470061}
+  - component: {fileID: 6925828581629345221}
   m_Layer: 5
   m_Name: ModuleIcon
   m_TagString: Untagged
@@ -248,3 +249,20 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6925828581629345221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4175468577867860038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b06d706bc034ab04da21a998805b4933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tickRate: 0.2
+  totalDurationTime: 3
+  moduleType:
+    TecnologyType: 0
+    ActiveType: 0

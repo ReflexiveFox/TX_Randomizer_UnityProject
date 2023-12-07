@@ -1,3 +1,6 @@
+#define DEBUG
+#undef DEBUG
+
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,15 +10,31 @@ namespace TX_Randomizer
 {
     public class Randomizer : MonoBehaviour
     {
-        public static event Action<TurretBasicInfo> OnTurretBasicInfoRandomized = delegate { };
-        public static event Action<HullBasicInfo> OnHullBasicInfoRandomized = delegate { };
+        public static event Action<TurretBasicInfo, List<TurretInfo>> OnTurretBasicInfoRandomized = delegate { };
+        public static event Action<HullBasicInfo, List<HullInfo>> OnHullBasicInfoRandomized = delegate { };
 
         public static event Action<TurretSkin> OnTurretSkinRandomized = delegate { };
         public static event Action<HullSkin> OnHullSkinRandomized = delegate { };
 
         public static event Action<Module, int> OnModuleSlotRandomized = delegate { };
 
-        public static event Action<AmmunitionListContainer, Ammunition> OnAmmunitionSlotRandomized = delegate { }; 
+        public static event Action<AmmunitionListContainer, Ammunition> OnAmmunitionSlotRandomized = delegate { };
+        public static event Action<Coating> OnCoatingSlotRandomized = delegate { };
+
+        [SerializeField] private PlayerCombo _randomizedCombo;
+
+        public static Randomizer Instance;
+
+        public PlayerCombo RandomizedCombo 
+        { 
+            get => _randomizedCombo; 
+            private set => _randomizedCombo = value;
+        }
+
+        private void Awake()
+        {
+            Instance = this;
+        }
 
         public void RandomizeMatchParameters()
         {
@@ -61,7 +80,7 @@ namespace TX_Randomizer
         public void RandomizeMap()
         {
             Map currentMap = BattleInfo.Map;
-            List<Map> mapsCopyList = new List<Map>(TankWiki.instance.Maps);
+            List<Map> mapsCopyList = new List<Map>(TankWiki.Instance.Maps);
             
             if(currentMap is null)
             {
@@ -91,115 +110,244 @@ namespace TX_Randomizer
 
         public void RandomizePlayerCombo()
         {
-            RandomizeTurret();
+            RandomizeTurretBaseInfo();
+            RandomizeHullBaseInfo();
+            
             RandomizeModules();
-            RandomizeHull();
+            
             RandomizeCoating();
             RandomizeAmmunition();
             RandomizePaint();
         }
 
-        private void RandomizeTurret()
-        {
-            RandomizeTurretBaseInfo();
-            RandomizeTurretSkin();
-        }
-
         public void RandomizeCoating()
         {
-            Coating currentCoating = PlayerCombo.Turret.Coating;
-            List<Coating> coatingListCopy = new List<Coating>(TankWiki.instance.Coatings);
+            Coating currentCoating = PlayerComboHandler.Instance.PlayerCombo.Coating;
+            List<Coating> coatingListCopy = new List<Coating>(TankWiki.Instance.Coatings);
             coatingListCopy.RemoveAt(0);
             int duplicateIndex = GetExistingCoatingItemIndex(coatingListCopy, currentCoating.CoatingName);
             if(duplicateIndex >= 0)
             {
                 coatingListCopy.RemoveAt(duplicateIndex);
             }
-            PlayerCombo.Turret.Coating = coatingListCopy[Random.Range(0, coatingListCopy.Count)];
+            RandomizedCombo.Coating = coatingListCopy[Random.Range(0, coatingListCopy.Count)];
+            OnCoatingSlotRandomized?.Invoke(RandomizedCombo.Coating);
         }
 
         public void RandomizePaint()
         {
-            Paint currentPaint = PlayerCombo.Hull.Paint;
-            List<Paint> paintListCopy = new List<Paint>(TankWiki.instance.Paints);
+            Paint currentPaint = PlayerComboHandler.Instance.PlayerCombo.Paint;
+            List<Paint> paintListCopy = new List<Paint>(TankWiki.Instance.Paints);
             paintListCopy.RemoveAt(0);
             int duplicateIndex = GetExistingPaintItemIndex(paintListCopy, currentPaint.PaintName);
             if (duplicateIndex >= 0)
             {
                 paintListCopy.RemoveAt(duplicateIndex);
             }
-            PlayerCombo.Hull.Paint = paintListCopy[Random.Range(0, paintListCopy.Count)];
+            RandomizedCombo.Paint = paintListCopy[Random.Range(0, paintListCopy.Count)];
         }
 
-        private void RandomizeHull()
+        public void RandomizeTurretBaseInfo()
         {
-            RandomizeHullBaseInfo();
-            RandomizeHullSkin();
-        }
+#if DEBUG && UNITY_EDITOR
+            Debug.Log($"Randomizer.RandomizeTurretBaseInfo(): Before change {PlayerComboHandler.Instance.PlayerCombo.Turret.BaseInfo.TurretName}");
+#endif
+            TurretBasicInfo currentTurretBasicInfo = PlayerComboHandler.Instance.PlayerCombo.Turret.BaseInfo;
 
-        private void RandomizeTurretBaseInfo()
-        {
-            TurretBasicInfo currentTurretBasicInfo = PlayerCombo.Turret.BaseInfo;
-            List<TurretInfo> turretInfoCopy = new List<TurretInfo>(TankWiki.instance.Turrets);
-
-            if (currentTurretBasicInfo != null)
+            if (currentTurretBasicInfo == null)
             {
-                int duplicateIndex = GetExistingTurretItemIndex(turretInfoCopy, currentTurretBasicInfo.TurretName);
+#if DEBUG && UNITY_EDITOR
+                Debug.Log($"Randomizer.RandomizeTurretBaseInfo(): {currentTurretBasicInfo} is null");
+#endif
+                return;
+            }
+
+#if DEBUG && UNITY_EDITOR
+            Debug.Log($"Randomizer.RandomizeTurretBaseInfo(): {currentTurretBasicInfo} is not null");
+#endif
+            List<TurretInfo> turretInfoCopy = CreateCleanTurretList(currentTurretBasicInfo);
+            int randomIndex = Random.Range(0, turretInfoCopy.Count);
+            RandomizedCombo.Turret.BaseInfo = turretInfoCopy[randomIndex].BaseInfo;
+
+            OnTurretBasicInfoRandomized?.Invoke(RandomizedCombo.Turret.BaseInfo, turretInfoCopy);
+#if DEBUG && UNITY_EDITOR
+            Debug.Log($"Randomizer.RandomizeTurretBaseInfo(): After change {PlayerComboHandler.Instance.PlayerCombo.Turret.BaseInfo.TurretName}");
+#endif
+        }
+
+        private List<TurretInfo> CreateCleanTurretList(TurretBasicInfo currentTurretBasicInfo)
+        {
+            List<TurretInfo> turretInfoCopy = new List<TurretInfo>(TankWiki.Instance.Turrets);
+            //Remove None element
+            if(currentTurretBasicInfo.TurretName != TurretBasicInfo.Name.None)
+            {
+                int duplicateIndex = -1, noneIndex = -1;
+                for(int i = 0; i < turretInfoCopy.Count; i++)
+                {
+                    if(turretInfoCopy[i].BaseInfo.TurretName == currentTurretBasicInfo.TurretName)
+                    {
+                        duplicateIndex = i;
+                        if (noneIndex != -1)
+                        {
+                            break;
+                        }
+                    }
+                    else if(turretInfoCopy[i].BaseInfo.TurretName == TurretBasicInfo.Name.None)
+                    {
+                        noneIndex = i;
+                        if (duplicateIndex != -1)
+                        {
+                            break;
+                        }
+                    }
+                }
                 if (duplicateIndex >= 0)
                 {
                     turretInfoCopy.RemoveAt(duplicateIndex);
                 }
+                if(noneIndex >= 0)
+                {
+                    turretInfoCopy.RemoveAt(noneIndex);
+                }
             }
-            PlayerCombo.Turret.BaseInfo = turretInfoCopy[Random.Range(0, turretInfoCopy.Count)].BaseInfo;
-            OnTurretBasicInfoRandomized?.Invoke(PlayerCombo.Turret.BaseInfo);
+            else
+            {
+                int noneIndex = -1;
+                for (int i = 0; i < turretInfoCopy.Count; i++)
+                {
+                    if (turretInfoCopy[i].BaseInfo.TurretName == TurretBasicInfo.Name.None)
+                    {
+                        noneIndex = i;
+                        break;
+                    }
+                }
+                if (noneIndex >= 0)
+                {
+                    turretInfoCopy.RemoveAt(noneIndex);
+                }
+            }
+
+            return turretInfoCopy;
         }
 
-        private void RandomizeHullBaseInfo()
+        private List<HullInfo> CreateCleanHullList(HullBasicInfo currentHullBasicInfo)
         {
-            HullBasicInfo currentHullBasicInfo = PlayerCombo.Hull.BaseInfo;
-            List<HullInfo> hullInfoCopy = new List<HullInfo>(TankWiki.instance.Hulls);
-
-            if (currentHullBasicInfo != null)
+            List<HullInfo> hullInfoCopy = new List<HullInfo>(TankWiki.Instance.Hulls);
+            //Remove None element
+            if (currentHullBasicInfo.HullName != HullBasicInfo.Name.None)
             {
-                int duplicateIndex = GetExistingHullItemIndex(hullInfoCopy, currentHullBasicInfo.HullName);
+                int duplicateIndex = -1, noneIndex = -1;
+                for (int i = 0; i < hullInfoCopy.Count; i++)
+                {
+                    if (hullInfoCopy[i].BaseInfo.HullName == currentHullBasicInfo.HullName)
+                    {
+                        duplicateIndex = i;
+                        if (noneIndex != -1)
+                        {
+                            break;
+                        }
+                    }
+                    else if (hullInfoCopy[i].BaseInfo.HullName == HullBasicInfo.Name.None)
+                    {
+                        noneIndex = i;
+                        if (duplicateIndex != -1)
+                        {
+                            break;
+                        }
+                    }
+                }
                 if (duplicateIndex >= 0)
                 {
                     hullInfoCopy.RemoveAt(duplicateIndex);
                 }
+                if (noneIndex >= 0)
+                {
+                    hullInfoCopy.RemoveAt(noneIndex);
+                }
             }
-            PlayerCombo.Hull.BaseInfo = hullInfoCopy[Random.Range(0, hullInfoCopy.Count)].BaseInfo;
-            OnHullBasicInfoRandomized?.Invoke(PlayerCombo.Hull.BaseInfo);
+            else
+            {
+                int noneIndex = -1;
+                for (int i = 0; i < hullInfoCopy.Count; i++)
+                {
+                    if (hullInfoCopy[i].BaseInfo.HullName == HullBasicInfo.Name.None)
+                    {
+                        noneIndex = i;
+                        break;
+                    }
+                }
+                if (noneIndex >= 0)
+                {
+                    hullInfoCopy.RemoveAt(noneIndex);
+                }
+            }
+
+            return hullInfoCopy;
+        }
+
+        public void RandomizeHullBaseInfo()
+        {
+#if DEBUG && UNITY_EDITOR
+            Debug.Log($"Randomizer.RandomizeHullBaseInfo(): Before change {PlayerComboHandler.Instance.PlayerCombo.Hull.BaseInfo.HullName}");
+#endif
+            HullBasicInfo currentHullBasicInfo = PlayerComboHandler.Instance.PlayerCombo.Hull.BaseInfo;
+
+            if (currentHullBasicInfo == null)
+            {
+#if DEBUG && UNITY_EDITOR
+                Debug.Log($"Randomizer.RandomizeHullBaseInfo(): {currentHullBasicInfo} is null");
+#endif
+                return;
+            }
+
+#if DEBUG && UNITY_EDITOR
+            Debug.Log($"Randomizer.RandomizeHullBaseInfo(): {currentHullBasicInfo} is not null");
+#endif
+            List<HullInfo> hullInfoCopy = CreateCleanHullList(currentHullBasicInfo);
+            int randomIndex = Random.Range(0, hullInfoCopy.Count);
+            RandomizedCombo.Hull.BaseInfo = hullInfoCopy[randomIndex].BaseInfo;
+            OnHullBasicInfoRandomized?.Invoke(RandomizedCombo.Hull.BaseInfo, hullInfoCopy);
+#if DEBUG && UNITY_EDITOR
+            Debug.Log($"Randomizer.RandomizeHullBaseInfo(): After change {PlayerComboHandler.Instance.PlayerCombo.Hull.BaseInfo.HullName}");
+#endif
         }
 
         public void RandomizeTurretSkin()
         {
-            if (PlayerCombo.Turret.BaseInfo is null || PlayerCombo.Turret.BaseInfo.TurretName == TurretBasicInfo.Name.None)
+            if (PlayerComboHandler.Instance.PlayerCombo.Turret.BaseInfo is null || PlayerComboHandler.Instance.PlayerCombo.Turret.BaseInfo.TurretName == TurretBasicInfo.Name.None)
             {
+#if DEBUG && UNITY_EDITOR
+                Debug.Log("PlayerCombo is null or Turret name is None");
+#endif
                 return;
             }
-            TurretSkin currentTurretSkin = PlayerCombo.Turret.Skin;
-            List<TurretSkin> turretSkinCopy = TankWiki.instance.GetTurretSkinsList(PlayerCombo.Turret.BaseInfo.TurretName);
+            TurretSkin currentTurretSkin = PlayerComboHandler.Instance.PlayerCombo.Turret.Skin;
+            List<TurretSkin> turretSkinCopy = TankWiki.Instance.GetTurretSkinsList(PlayerComboHandler.Instance.PlayerCombo.Turret.BaseInfo.TurretName);
 
             if (currentTurretSkin != null)
             {
                 int duplicateIndex = GetExistingTurretItemIndex(turretSkinCopy, currentTurretSkin.GetName);
+#if DEBUG && UNITY_EDITOR
+                Debug.Log($"Randomizer.RandomizeTurretBaseInfo(): duplicateIndex -> {duplicateIndex}");
+#endif
                 if (duplicateIndex >= 0)
                 {
                     turretSkinCopy.RemoveAt(duplicateIndex);
                 }
+
             }
-            PlayerCombo.Turret.Skin = turretSkinCopy[Random.Range(0, turretSkinCopy.Count)];
-            OnTurretSkinRandomized?.Invoke(PlayerCombo.Turret.Skin);
+            RandomizedCombo.Turret.Skin = turretSkinCopy[Random.Range(0, turretSkinCopy.Count)];
+            OnTurretSkinRandomized?.Invoke(RandomizedCombo.Turret.Skin);
         }
 
         public void RandomizeHullSkin()
         {
-            if (PlayerCombo.Hull.BaseInfo is null || PlayerCombo.Hull.BaseInfo.HullName == HullBasicInfo.Name.None)
+            if (PlayerComboHandler.Instance.PlayerCombo.Hull.BaseInfo is null || PlayerComboHandler.Instance.PlayerCombo.Hull.BaseInfo.HullName == HullBasicInfo.Name.None)
             {
                 return;
             }
-            HullSkin currentHullSkin = PlayerCombo.Hull.Skin;
-            List<HullSkin> hullSkinCopy = TankWiki.instance.GetHullSkinsList(PlayerCombo.Hull.BaseInfo.HullName);
+            HullSkin currentHullSkin = PlayerComboHandler.Instance.PlayerCombo.Hull.Skin;
+            List<HullSkin> hullSkinCopy = TankWiki.Instance.GetHullSkinsList(PlayerComboHandler.Instance.PlayerCombo.Hull.BaseInfo.HullName);
 
             if (currentHullSkin != null)
             {
@@ -209,8 +357,8 @@ namespace TX_Randomizer
                     hullSkinCopy.RemoveAt(duplicateIndex);
                 }
             }
-            PlayerCombo.Hull.Skin = hullSkinCopy[Random.Range(0, hullSkinCopy.Count)];
-            OnHullSkinRandomized?.Invoke(PlayerCombo.Hull.Skin);
+            RandomizedCombo.Hull.Skin = hullSkinCopy[Random.Range(0, hullSkinCopy.Count)];
+            OnHullSkinRandomized?.Invoke(RandomizedCombo.Hull.Skin);
         }
 
         private int GetExistingCoatingItemIndex(List<Coating> coatings, Coating.Name coatingName)
@@ -285,16 +433,6 @@ namespace TX_Randomizer
             return -1;
         }
 
-        public void RandomizeTurretSlot()
-        {
-            RandomizeTurret();
-        }
-
-        public void RandomizeHullSlot()
-        {
-            RandomizeHull();
-        }
-
         private void RandomizeModules()
         {
             RandomizeFirstModuleSlot();
@@ -305,47 +443,29 @@ namespace TX_Randomizer
             RandomizeSixthModuleSlot();
         }
 
-        public void RandomizeFirstModuleSlot()
-        {
-            RandomizeModule(TankPartType.Turret, ModuleType.ActivationType.Active, true);           
-        }
-        public void RandomizeSecondModuleSlot()
-        {
-            RandomizeModule(TankPartType.Turret, ModuleType.ActivationType.Active, false);
-        }
-        public void RandomizeThirdModuleSlot()
-        {
-            RandomizeModule(TankPartType.Turret, ModuleType.ActivationType.Passive);
-        }
-        public void RandomizeFourthModuleSlot()
-        {
-            RandomizeModule(TankPartType.Hull, ModuleType.ActivationType.Active, true);
-        }
-        public void RandomizeFifthModuleSlot()
-        {
-            RandomizeModule(TankPartType.Hull, ModuleType.ActivationType.Active, false);
-        }
-        public void RandomizeSixthModuleSlot()
-        {
-            RandomizeModule(TankPartType.Hull, ModuleType.ActivationType.Passive);
-        }
+        public void RandomizeFirstModuleSlot() => RandomizeModule(TankPartType.Turret, ModuleType.ActivationType.Active, true);
+        public void RandomizeSecondModuleSlot() => RandomizeModule(TankPartType.Turret, ModuleType.ActivationType.Active, false);
+        public void RandomizeThirdModuleSlot() => RandomizeModule(TankPartType.Turret, ModuleType.ActivationType.Passive);
+        public void RandomizeFourthModuleSlot() => RandomizeModule(TankPartType.Hull, ModuleType.ActivationType.Active, true);
+        public void RandomizeFifthModuleSlot() => RandomizeModule(TankPartType.Hull, ModuleType.ActivationType.Active, false);
+        public void RandomizeSixthModuleSlot() => RandomizeModule(TankPartType.Hull, ModuleType.ActivationType.Passive);
 
         private void RandomizeModule(TankPartType tankPartType, ModuleType.ActivationType activationType, bool isFirstActiveModule = true)
         {
             List<Module> moduleCopyList = GetCopyList(tankPartType, activationType);
 
-            Module currentModule = PlayerCombo.ModulesArray.GetModule(tankPartType, activationType, isFirstActiveModule);
+            Module currentModule = PlayerComboHandler.Instance.PlayerCombo.ModulesArray.GetModule(tankPartType, activationType, isFirstActiveModule);
             if(currentModule != null && moduleCopyList.Contains(currentModule))
             {
                 moduleCopyList.Remove(currentModule);
             }
-            Module otherModule = PlayerCombo.ModulesArray.GetModule(tankPartType, activationType, !isFirstActiveModule);
+            Module otherModule = PlayerComboHandler.Instance.PlayerCombo.ModulesArray.GetModule(tankPartType, activationType, !isFirstActiveModule);
             if (moduleCopyList.Contains(otherModule))
             {
                 moduleCopyList.Remove(otherModule);
             }
-            PlayerCombo.ModulesArray.SetModule(tankPartType, activationType, moduleCopyList[Random.Range(0, moduleCopyList.Count)], isFirstActiveModule);
-            OnModuleSlotRandomized?.Invoke(PlayerCombo.ModulesArray.GetModule(tankPartType, activationType, isFirstActiveModule), PlayerCombo.ModulesArray.GetModuleIndex(tankPartType, activationType, isFirstActiveModule));
+            RandomizedCombo.ModulesArray.SetModule(tankPartType, activationType, moduleCopyList[Random.Range(0, moduleCopyList.Count)], isFirstActiveModule);
+            OnModuleSlotRandomized?.Invoke(RandomizedCombo.ModulesArray.GetModule(tankPartType, activationType, isFirstActiveModule), RandomizedCombo.ModulesArray.GetModuleIndex(tankPartType, activationType, isFirstActiveModule));
         }
 
         private List<Module> GetCopyList(TankPartType tankPartType, ModuleType.ActivationType activationType)
@@ -354,11 +474,11 @@ namespace TX_Randomizer
             {
                 if (activationType is ModuleType.ActivationType.Active)
                 {
-                    return new List<Module>(TankWiki.instance.ActiveTurretModules);
+                    return new List<Module>(TankWiki.Instance.ActiveTurretModules);
                 }
                 else if (activationType is ModuleType.ActivationType.Passive)
                 {
-                    return new List<Module>(TankWiki.instance.PassiveTurretModules);
+                    return new List<Module>(TankWiki.Instance.PassiveTurretModules);
                 }
                 else
                 {
@@ -370,11 +490,11 @@ namespace TX_Randomizer
             {
                 if (activationType is ModuleType.ActivationType.Active)
                 {
-                    return new List<Module>(TankWiki.instance.ActiveHullModules);
+                    return new List<Module>(TankWiki.Instance.ActiveHullModules);
                 }
                 else if (activationType is ModuleType.ActivationType.Passive)
                 {
-                    return new List<Module>(TankWiki.instance.PassiveHullModules);
+                    return new List<Module>(TankWiki.Instance.PassiveHullModules);
                 }
                 else
                 {
@@ -391,19 +511,19 @@ namespace TX_Randomizer
 
         public void RandomizeAmmunition()
         {
-            if (PlayerCombo.Turret.BaseInfo.TurretName == TurretBasicInfo.Name.None)
+            if (PlayerComboHandler.Instance.PlayerCombo.Turret.BaseInfo.TurretName == TurretBasicInfo.Name.None)
                 return;
             //Select ammo list
-            AmmunitionListContainer ammoListContainer = TankWiki.instance.GetAmmunitionListContainer(PlayerCombo.Turret.BaseInfo.TurretName);
+            AmmunitionListContainer ammoListContainer = TankWiki.Instance.GetAmmunitionListContainer(PlayerComboHandler.Instance.PlayerCombo.Turret.BaseInfo.TurretName);
             List<Ammunition> ammoList = new List<Ammunition>(ammoListContainer.AmmunitionsList);
             //Remove eventual pre-existant ammo
-            Ammunition currentAmmo = PlayerCombo.Ammunition;
+            Ammunition currentAmmo = PlayerComboHandler.Instance.PlayerCombo.Turret.Ammunition;
             if(currentAmmo != null && ammoList.Contains(currentAmmo))
             {
                 ammoList.Remove(currentAmmo);
             }
-            PlayerCombo.Ammunition = ammoList[Random.Range(0, ammoList.Count)];  
-            OnAmmunitionSlotRandomized?.Invoke(ammoListContainer, PlayerCombo.Ammunition);
+            RandomizedCombo.Turret.Ammunition = ammoList[Random.Range(0, ammoList.Count)];  
+            OnAmmunitionSlotRandomized?.Invoke(ammoListContainer, RandomizedCombo.Turret.Ammunition);
         }
 
         private T RandomizeElementInEnum<T>(T startElement)

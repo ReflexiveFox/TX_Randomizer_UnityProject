@@ -5,17 +5,41 @@ namespace TX_Randomizer
 {
     public class CoatingNameDropdown : DropdownBase
     {
-        private void Start()
+        private CoatingSlotAnimation slotAnimation;
+
+        protected override void Awake()
         {
-            PlayerCombo.Turret.OnCoatingChanged += ApplyCoatingName;
+            base.Awake();
+            TryGetComponent(out slotAnimation);
+        }
+
+        private void Start()
+        {        
             dropdown.onValueChanged.AddListener(ApplyCoatingSprite);
             CreateDropdownOptionsList();
+            if(slotAnimation)
+            {
+                slotAnimation.OnAnimationChanging += ApplyCoatingName;
+                slotAnimation.OnAnimationFinished += ApplyCoatingName;
+            }
+            else
+            {
+                PlayerComboHandler.Instance.PlayerCombo.OnCoatingChanged += ApplyCoatingName;
+            }
         }
 
         private void OnDestroy()
-        {
-            PlayerCombo.Turret.OnCoatingChanged -= ApplyCoatingName;
+        {         
             dropdown.onValueChanged.RemoveListener(ApplyCoatingSprite);
+            if (slotAnimation)
+            {
+                slotAnimation.OnAnimationChanging -= ApplyCoatingName;
+                slotAnimation.OnAnimationFinished -= ApplyCoatingName;
+            }
+            else
+            {
+                PlayerComboHandler.Instance.PlayerCombo.OnCoatingChanged -= ApplyCoatingName;
+            }
         }
 
         private void ApplyCoatingSprite(int coatingIndex)
@@ -25,9 +49,23 @@ namespace TX_Randomizer
 
         private void ApplyCoatingName()
         {
+
             for (int i = 0; i < dropdown.options.Count; i++)
             {
-                if (dropdown.options[i].text == TankWiki.instance.CoatingNameDictionary.GetString(PlayerCombo.Turret.Coating.CoatingName))
+                if (dropdown.options[i].text == TankWiki.Instance.CoatingNameDictionary.GetString(Randomizer.Instance.RandomizedCombo.Coating.CoatingName))
+                {
+                    dropdown.value = i;
+                    break;
+                }
+            }
+        }
+
+        private void ApplyCoatingName(Coating newCoating)
+        {
+
+            for (int i = 0; i < dropdown.options.Count; i++)
+            {
+                if (dropdown.options[i].text == TankWiki.Instance.CoatingNameDictionary.GetString(newCoating.CoatingName))
                 {
                     dropdown.value = i;
                     break;
@@ -38,12 +76,12 @@ namespace TX_Randomizer
         private void CreateDropdownOptionsList()
         {
             List<TMP_Dropdown.OptionData> options = new();
-            List<Coating> currentCoatings = new List<Coating>(TankWiki.instance.Coatings);
+            List<Coating> currentCoatings = new List<Coating>(TankWiki.Instance.Coatings);
             dropdown.ClearOptions();
            
             for (int i = 0; i < currentCoatings.Count; i++)
             {
-                TMP_Dropdown.OptionData option = new(TankWiki.instance.CoatingNameDictionary.GetString(currentCoatings[i].CoatingName), currentCoatings[i].Sprite);
+                TMP_Dropdown.OptionData option = new(TankWiki.Instance.CoatingNameDictionary.GetString(currentCoatings[i].CoatingName), currentCoatings[i].Sprite);
                 options.Add(option);
             }
             dropdown.AddOptions(options);

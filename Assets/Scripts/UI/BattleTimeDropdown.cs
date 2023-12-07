@@ -19,7 +19,7 @@ namespace TX_Randomizer
         {
             for (int i = 0; i < dropdown.options.Count; i++)
             {
-                if (dropdown.options[i].text == TankWiki.instance.BattleTimeDictionary.GetString(BattleInfo.BattleTime))
+                if (dropdown.options[i].text == TankWiki.Instance.BattleTimeDictionary.GetString(BattleInfo.BattleTime))
                 {
                     dropdown.value = i;
                     break;
@@ -34,7 +34,7 @@ namespace TX_Randomizer
             dropdown.ClearOptions();
             foreach (BattleInfo.DurationTime battleTime in (BattleInfo.DurationTime[]) Enum.GetValues(typeof(BattleInfo.DurationTime)))
             {
-                options.Add(new TMP_Dropdown.OptionData(TankWiki.instance.BattleTimeDictionary.GetString(battleTime)));
+                options.Add(new TMP_Dropdown.OptionData(TankWiki.Instance.BattleTimeDictionary.GetString(battleTime)));
             }
             dropdown.AddOptions(options);
         }

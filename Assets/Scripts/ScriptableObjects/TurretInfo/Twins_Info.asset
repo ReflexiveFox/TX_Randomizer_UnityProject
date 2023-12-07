@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023b122739a6db54db1d08716e35d8a4, type: 3}
   m_Name: Twins_Info
   m_EditorClassIdentifier: 
-  BaseInfo:
+  baseInfo:
     TurretName: 10
-    Icon: {fileID: 21300000, guid: fc45781cf14de7d449a2129b00c7dd30, type: 3}
-  Skins:
+    Icon: {fileID: 21300000, guid: 8e2a3b54e8fb88743862bcfc67eda225, type: 3}
+  skins:
   - {fileID: 11400000, guid: ecb65618a0994854ab232221f14645cc, type: 2}
   - {fileID: 11400000, guid: 892c13ec7972fe24e85c35a7eee7d58c, type: 2}
   - {fileID: 11400000, guid: d497dd65b3c9a3c488d3d387675166dd, type: 2}
@@ -24,10 +24,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 33388313a47e724428cad06164138f17, type: 2}
   - {fileID: 11400000, guid: 53dcb9071a5b7a34a8415a40be38ded4, type: 2}
   - {fileID: 11400000, guid: 2df80785d05be6f48b53a73698136187, type: 2}
-  Ammunitions:
-  - {fileID: 11400000, guid: eb8d10a8871070c46b3df1ae6821be59, type: 2}
-  - {fileID: 11400000, guid: e89491923508c5943aa65b37d4fbe93b, type: 2}
-  - {fileID: 11400000, guid: 19c7b9de551c2154e806aefdde7fb4d8, type: 2}
-  - {fileID: 11400000, guid: 5cf6ceedc879b7742b71a1f84e6be19c, type: 2}
-  - {fileID: 11400000, guid: 999899df775b4ba4d93ad5f4f05a8e91, type: 2}
-  - {fileID: 11400000, guid: 93ec7a734cf125e4787c812ec5c5b655, type: 2}
+  ammunitions: {fileID: 11400000, guid: e7171d62df49ce6408a2b73fa2970f7c, type: 2}

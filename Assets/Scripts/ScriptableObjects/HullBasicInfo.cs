@@ -8,10 +8,10 @@ namespace TX_Randomizer
         public Name HullName = Name.None;
         public Sprite Icon;
 
-        public HullBasicInfo()
+        public HullBasicInfo(Name newHullName)
         {
-            HullName = Name.None;
-            Icon = null;
+            HullName = newHullName;
+            Icon = TankWiki.Instance.GetHullInfo(newHullName).BaseInfo.Icon;
         }
     }
 }

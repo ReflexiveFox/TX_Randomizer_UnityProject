@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 023b122739a6db54db1d08716e35d8a4, type: 3}
   m_Name: Railgun_Info
   m_EditorClassIdentifier: 
-  BaseInfo:
+  baseInfo:
     TurretName: 5
-    Icon: {fileID: 21300000, guid: 12b26cde7c669cd43818283fe7c652ac, type: 3}
-  Skins:
+    Icon: {fileID: 21300000, guid: 00b1be8cc305cc54f9e17cd78fa5e760, type: 3}
+  skins:
   - {fileID: 11400000, guid: 470072ff1ab3da143b4c9c2aad9bb1fc, type: 2}
   - {fileID: 11400000, guid: dae948420db848848ad3da7e34a40d7d, type: 2}
   - {fileID: 11400000, guid: 432d44638e03599489cb9f63202756b8, type: 2}
@@ -25,11 +25,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b48f66a5ed4883c49a2dc8db1f023167, type: 2}
   - {fileID: 11400000, guid: 87ae1c85b1f86644b802c4a7e4872e79, type: 2}
   - {fileID: 11400000, guid: 5c136b513bc43dd4a9b5541b9bf7fe3d, type: 2}
-  Ammunitions:
-  - {fileID: 11400000, guid: a6e9b729f8a385a4f8c0087a749c4f5b, type: 2}
-  - {fileID: 11400000, guid: 5acd50a6f16e5ec4d928df61bb51f661, type: 2}
-  - {fileID: 11400000, guid: 02346146409e4514b872a7c07031af50, type: 2}
-  - {fileID: 11400000, guid: 1032105d05934924294f2893d759efea, type: 2}
-  - {fileID: 11400000, guid: 7ad8469e2850c29499cdbb24fd41bba5, type: 2}
-  - {fileID: 11400000, guid: 6f8dcd92f6fb2e042b1150da3b747e3b, type: 2}
-  - {fileID: 11400000, guid: fbff777a8c48cd54b8ade56ce781809f, type: 2}
+  ammunitions: {fileID: 11400000, guid: 5ac37b89b0b33184d9ce29aa2944b9e5, type: 2}

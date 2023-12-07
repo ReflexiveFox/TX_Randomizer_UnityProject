@@ -19,7 +19,7 @@ namespace TX_Randomizer
         {
             for (int i = 0; i < dropdown.options.Count; i++)
             {
-                if (dropdown.options[i].text == TankWiki.instance.BattleModeDictionary.GetString(BattleInfo.BattleMode))
+                if (dropdown.options[i].text == TankWiki.Instance.BattleModeDictionary.GetString(BattleInfo.BattleMode))
                 {
                     dropdown.value = i;
                     break;
@@ -34,7 +34,7 @@ namespace TX_Randomizer
             dropdown.ClearOptions();
             foreach (BattleInfo.GameMode gameMode in (BattleInfo.GameMode[]) Enum.GetValues(typeof(BattleInfo.GameMode)))
             {
-                options.Add(new TMP_Dropdown.OptionData(TankWiki.instance.BattleModeDictionary.GetString(gameMode)));
+                options.Add(new TMP_Dropdown.OptionData(TankWiki.Instance.BattleModeDictionary.GetString(gameMode)));
             }
             dropdown.AddOptions(options);
         }

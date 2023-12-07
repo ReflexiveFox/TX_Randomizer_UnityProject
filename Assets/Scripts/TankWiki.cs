@@ -1,12 +1,19 @@
+#define DEBUG
+#undef DEBUG
+
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace TX_Randomizer
 {
     public class TankWiki : MonoBehaviour
     {
-        public static TankWiki instance;
+        public static event Action OnWikiReady = delegate { };
+
+        public static TankWiki Instance;
+
         public const int MAX_PLAYERS = 10;
         [Header("String Dictionaries")]
         [SerializeField] private AmmunitionNameDictionary _ammunitionNameDictionary;
@@ -63,31 +70,64 @@ namespace TX_Randomizer
 
         private void Awake()
         {
-            if (instance != null && instance != this)
-            {
-                DestroyImmediate(gameObject);
-            }
-            else
-            {
-                instance = this;
-            }
+            Instance = this;   
         }
 
         public List<TurretSkin> GetTurretSkinsList(TurretBasicInfo.Name turretName)
         {
-            int index = (int)turretName -1;
-            return new List<TurretSkin>(_turrets[index].Skins);
+            if(turretName is TurretBasicInfo.Name.None)
+            {
+                return null;
+            }
+
+            try
+            {
+                return new List<TurretSkin>(_turrets[(int)turretName].Skins);
+            }
+            catch(Exception)
+            {
+#if DEBUG && UNITY_EDITOR
+                Debug.LogError($"GetTurretSkinsList({turretName}) with index: {(int)turretName}");
+#endif
+                return null;
+            }
+        }
+
+        public TurretSkin GetTurretSkin(TurretBasicInfo.Name turretName, int skinIndex)
+        {
+            return _turrets[(int)turretName].Skins[skinIndex];
         }
 
         public List<HullSkin> GetHullSkinsList(HullBasicInfo.Name hullName)
         {
-            int index = (int)hullName - 1;
-            return new List<HullSkin>(_hulls[index].Skins);
+            if (hullName is HullBasicInfo.Name.None)
+            {
+                return null;
+            }
+
+            try
+            {
+                return new List<HullSkin>(_hulls[(int)hullName].Skins);
+            }
+            catch (Exception)
+            {
+#if DEBUG && UNITY_EDITOR
+                Debug.LogError($"GetTurretSkinsList({hullName}) with index: {(int)hullName}");
+#endif
+                return null;
+            }
+        }
+
+        public HullSkin GetHullSkin(HullBasicInfo.Name hullName, int skinIndex)
+        {
+            return _hulls[(int)hullName].Skins[skinIndex];
         }
 
         public Module GetModule(ModuleType moduleType, int moduleIndex)
         {
+#if DEBUG && UNITY_EDITOR
             Debug.Log($"TankWiki: Getting module of type {moduleType.ActiveType}");
+#endif
             try
             {
                 if (moduleType.TecnologyType is TankPartType.Hull)
@@ -102,7 +142,9 @@ namespace TX_Randomizer
                     }
                     else
                     {
+#if DEBUG && UNITY_EDITOR
                         Debug.LogError("ActivationType is not defined");
+#endif
                         return null;
                     }
                 }
@@ -119,65 +161,127 @@ namespace TX_Randomizer
                     }
                     else
                     {
+#if DEBUG && UNITY_EDITOR
                         Debug.LogError("ActivationType is not defined");
+#endif
                         return null;
                     }
                 }
                 else
                 {
+#if DEBUG && UNITY_EDITOR
                     Debug.LogError("TecnologyType is not defined");
+#endif
                     return null;
                 }
-            }catch(ArgumentOutOfRangeException e)
+            }
+            catch(ArgumentOutOfRangeException e)
             {
+#if DEBUG && UNITY_EDITOR
                 Debug.LogError($"Errore di indice! {e.ParamName} ");
+#endif
                 return null;
             }
 
         }
    
-        public List<Ammunition> GetAmmunitionList(TurretBasicInfo.Name turretName)
+        public List<Ammunition> GetAmmunitionListOf(TurretBasicInfo.Name turretOwnerName)
         {
             foreach(AmmunitionListContainer ammoList in Ammunitions)
             {
-                if(ammoList.TurretOwned == turretName)
+                if(ammoList.TurretOwned == turretOwnerName)
                     return new List<Ammunition>(ammoList.AmmunitionsList);
             }
-            Debug.LogError($"Ammunition list of {turretName} not found");
+#if DEBUG && UNITY_EDITOR
+            Debug.LogError($"Ammunition list of {turretOwnerName} not found");
+#endif
             return null;
         }
 
-        public AmmunitionListContainer GetAmmunitionListContainer(TurretBasicInfo.Name turretName)
+        public AmmunitionListContainer GetAmmunitionListContainer(TurretBasicInfo.Name turretOwnerName)
         {
             foreach (AmmunitionListContainer ammoList in Ammunitions)
             {
-                if (ammoList.TurretOwned == turretName)
+                if (ammoList.TurretOwned == turretOwnerName)
                     return ammoList;
             }
-            Debug.LogError($"Ammunition list container of {turretName} not found");
+#if DEBUG && UNITY_EDITOR
+            Debug.LogError($"Ammunition list container of {turretOwnerName} not found");
+#endif
             return null;
         }
 
-        public Ammunition GetAmmunition(string ammoName, TurretBasicInfo.Name turretName)
+        public Ammunition GetAmmunition(Ammunition.Name ammoName, TurretBasicInfo.Name turretOwnerName)
         {
             foreach(AmmunitionListContainer ammoListContainer in Ammunitions)
             {
-                if(ammoListContainer.TurretOwned == turretName)
+                if(ammoListContainer.TurretOwned == turretOwnerName)
                 {
+#if DEBUG && UNITY_EDITOR
+                    Debug.Log($"AmmoListContainer of {ammoListContainer.TurretOwned} == Parameter {turretOwnerName}");
+#endif
                     foreach(Ammunition ammunition in ammoListContainer.AmmunitionsList)
                     {
-                        if (ammunition.AmmoName.ToString() == ammoName)
+#if DEBUG && UNITY_EDITOR
+                        Debug.Log($"Ammunition to get: {ammoName}, Iterative Ammunition: {ammunition.AmmoName}");
+#endif
+                        if (ammunition.AmmoName == ammoName)
                         {
                             return ammunition;
                         }
                     }
-                    Debug.LogError($"Ammunition \"{ammoName}\" of {turretName} not found");
+#if DEBUG && UNITY_EDITOR
+                    Debug.LogError($"Ammunition \"{ammoName}\" of {turretOwnerName} not found");
+#endif
                     return null;
                 }
-                
+
             }
-            Debug.LogError($"AmmunitionListContainer of {turretName} not found");
+#if DEBUG && UNITY_EDITOR
+            Debug.LogError($"AmmunitionListContainer of {turretOwnerName} not found");
+#endif
             return null;
+        }
+
+        public TurretInfo GetTurretInfo(TurretBasicInfo.Name turretName)
+        {
+            foreach(TurretInfo turretInfo in Turrets)
+            {
+                if(turretInfo.BaseInfo.TurretName == turretName)
+                {
+                    return turretInfo;
+                }
+            }
+#if DEBUG && UNITY_EDITOR
+            Debug.LogWarning($"There is no turret called {turretName}, returning None");
+#endif
+            return GetNoneInfoOf(Turrets);
+        }
+
+        public HullInfo GetHullInfo(HullBasicInfo.Name hullName)
+        {
+            foreach (HullInfo hullInfo in Hulls)
+            {
+                if (hullInfo.BaseInfo.HullName == hullName)
+                {
+                    return hullInfo;
+                }
+            }
+#if DEBUG && UNITY_EDITOR
+            Debug.LogWarning($"There is no hull called {hullName}, returning None");
+#endif
+            return GetNoneInfoOf(Hulls);
+        }
+
+        /// <summary>
+        /// Returns the first element of a list to obtain the "None" info
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="list"></param>
+        /// <returns></returns>
+        public static T GetNoneInfoOf<T>(List<T> list) where T : ScriptableObject
+        {
+            return list[0];    //Return the last element for none info
         }
     }
 }

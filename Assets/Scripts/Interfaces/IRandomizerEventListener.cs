@@ -2,6 +2,6 @@ namespace TX_Randomizer
 {
     public interface IRandomizerEventListener
     {
-        public void ValidateCombo(PlayerCombo newCombo);
+        public void ValidateCombo(PlayerComboHandler newCombo);
     }
 }
